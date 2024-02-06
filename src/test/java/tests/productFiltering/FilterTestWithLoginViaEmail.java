@@ -1,4 +1,4 @@
-package tests.asd;
+package tests.productFiltering;
 
 import constants.AppXpath;
 import io.appium.java_client.AppiumDriver;
@@ -7,6 +7,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,7 +22,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class ads {
+public class FilterTestWithLoginViaEmail {
 
     private AppiumDriver<MobileElement> driver;
     private AppXpath _appXpath;
@@ -80,14 +81,12 @@ public class ads {
         WebDriverWait wait = new WebDriverWait(driver, durationTime);
         long loginTestStartTime = System.currentTimeMillis();
 
-
         long clickingGetStartedButtonStartTime = System.currentTimeMillis();
         MobileElement GetStartedButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.GetStartedButtonXpath));
         GetStartedButton.click();
         long clickingGetStartedButtonEndTime = System.currentTimeMillis();
         long clickingGetStartedButtonTotalTime = clickingGetStartedButtonEndTime - clickingGetStartedButtonStartTime;
         System.out.println("Clicking Get Started Button: " + clickingGetStartedButtonTotalTime + " millisecond");
-
 
         long clickingLoginButtonStartTime = System.currentTimeMillis();
         MobileElement loginButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.loginButtonXpath));
@@ -133,7 +132,7 @@ public class ads {
 
         long loginTestEndTime = System.currentTimeMillis();
         long loginTestTotalTime = loginTestEndTime - loginTestStartTime;
-        System.out.println("login Total Test: " + loginTestTotalTime + " millisecond");
+        System.out.println("Login Total Test: " + loginTestTotalTime + " millisecond");
 
     }
 
@@ -143,83 +142,83 @@ public class ads {
         WebDriverWait wait = new WebDriverWait(driver, durationTime);
         long popularRestaurantTestStartTime = System.currentTimeMillis();
 
-        long clickingFilterButtonStartTime = System.currentTimeMillis();
-        MobileElement filterButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.filterButtonXpath));
-        filterButton.click();
-        long clickingFilterButtonEndTime = System.currentTimeMillis();
-        long clickingFilterButtonTotalTime = clickingFilterButtonEndTime - clickingFilterButtonStartTime;
-        System.out.println("clicking Filter Button: " + clickingFilterButtonTotalTime + " millisecond");
+        long clickingProductFilterButtonStartTime = System.currentTimeMillis();
+        MobileElement productFilterButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.procuctFilterButtonXpath));
+        productFilterButton.click();
+        long clickingProductFilterButtonEndTime = System.currentTimeMillis();
+        long clickingProductFilterButtonTotalTime = clickingProductFilterButtonEndTime - clickingProductFilterButtonStartTime;
+        System.out.println("Clicking Product Filter Button: " + clickingProductFilterButtonTotalTime + " millisecond");
 
-        long cclosingStartTime = System.currentTimeMillis();
-        Thread.sleep(2000);
-        MobileElement closing = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.closingTheSearchField2Xpath));
-        closing.click();
-        long closingEndTime = System.currentTimeMillis();
-        long closingTotalTime = closingEndTime - cclosingStartTime;
-        System.out.println("closing : " + closingTotalTime + " millisecond");
+        long closingTheSearchFieldOnTheProductPageStartTime = System.currentTimeMillis();
+       // Thread.sleep(2000);
+        MobileElement searchFieldOnTheProductPage = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.closingTheSearchFieldOnTheProductPageXpath));
+        searchFieldOnTheProductPage.click();
+        long closingTheSearchFieldOnTheProductPageEndTime = System.currentTimeMillis();
+        long closingTheSearchFieldOnTheProductPageTotalTime = closingTheSearchFieldOnTheProductPageEndTime - closingTheSearchFieldOnTheProductPageStartTime;
+        System.out.println("Closing The Search Field on the Product Page: " + closingTheSearchFieldOnTheProductPageTotalTime + " millisecond");
 
-        long clickingArabicButtonStartTime = System.currentTimeMillis();
-        Thread.sleep(2000);
-        MobileElement arabicButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.arabicButtonXpath));
-        arabicButton.click();
-        long clickingArabicButtonEndTime = System.currentTimeMillis();
-        long clickingArabicButtonTotalTime = clickingArabicButtonEndTime - clickingArabicButtonStartTime;
-        System.out.println("clicking Arabic Button: " + clickingArabicButtonTotalTime + " millisecond");
+        long clickingCategoriesButtonStartTime = System.currentTimeMillis();
+       // Thread.sleep(2000);
+        MobileElement categoriesButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.categoriesButtonXpath));
+        categoriesButton.click();
+        long clickingCategoriesButtonEndTime = System.currentTimeMillis();
+        long clickingCategoriesButtonTotalTime = clickingCategoriesButtonEndTime - clickingCategoriesButtonStartTime;
+        System.out.println("Clicking Categories Button: " + clickingCategoriesButtonTotalTime + " millisecond");
 
         long closingTheSearchStartTime = System.currentTimeMillis();
         MobileElement closingTheSearch = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.closingTheSearchFieldXpath));
         closingTheSearch.click();
         long closingTheSearchEndTime = System.currentTimeMillis();
         long closingTheSearchTotalTime = closingTheSearchEndTime - closingTheSearchStartTime;
-        System.out.println("closingTheSearch Arabic Button: " + closingTheSearchTotalTime + " millisecond");
+        System.out.println("Closing The Search Field: " + closingTheSearchTotalTime + " millisecond");
 
 
         long clickingBackPageButtonStartTime = System.currentTimeMillis();
-       Thread.sleep(2000);
-        MobileElement backPageButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.backPageButtonXpath));
+       // Thread.sleep(2000);
+        MobileElement backPageButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(By.className("com.horcrux.svg.PathView")));
         backPageButton.click();
         long clickingBackPageButtonEndTime = System.currentTimeMillis();
         long clickingBackPageButtonTotalTime = clickingBackPageButtonEndTime - clickingBackPageButtonStartTime;
-        System.out.println("Clicking Back Page Button: " + clickingBackPageButtonTotalTime + " millisecond");
+        System.out.println("Clicking Back Page Button: " + clickingBackPageButtonTotalTime + " millisecond"); //???
 
-        long clickingCouplesFeastFavoriteButtonStartTime = System.currentTimeMillis();
-        MobileElement couplesFeastFavoriteButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.colaButtonXpath));
-        couplesFeastFavoriteButton.click();
-        long clickingCouplesFeastFavoriteButtonEndTime = System.currentTimeMillis();
-        long clickingCouplesFeastFavoriteButtonTotalTime = clickingCouplesFeastFavoriteButtonEndTime - clickingCouplesFeastFavoriteButtonStartTime;
-        System.out.println("Clicking Couples Feast Favorite Button: " + clickingCouplesFeastFavoriteButtonTotalTime + " millisecond");
+        long clickingCocaColaProductButtonStartTime = System.currentTimeMillis();
+        MobileElement cocaColaProductButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.cocaColaProductButtonXpath));//???
+        cocaColaProductButton.click();
+        long clickingCocaColaProductButtonEndTime = System.currentTimeMillis();
+        long clickingCocaColaProductButtonTotalTime = clickingCocaColaProductButtonEndTime - clickingCocaColaProductButtonStartTime;
+        System.out.println("Clicking CocaCola Product Button: " + clickingCocaColaProductButtonTotalTime + " millisecond");
 
         long clickingCouplesFeastButtonStartTime = System.currentTimeMillis();
         MobileElement couplesFeastButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.cocaColaButtonXpath));
         couplesFeastButton.click();
         long clickingCouplesFeastButtonEndTime = System.currentTimeMillis();
         long clickingCouplesFeastButtonTotalTime = clickingCouplesFeastButtonEndTime - clickingCouplesFeastButtonStartTime;
-        System.out.println("coca cola: " + clickingCouplesFeastButtonTotalTime + " millisecond");
+        System.out.println("Clicking Coca Cola Button: " + clickingCouplesFeastButtonTotalTime + " millisecond");
 
 
         long clickingPanRadioButtonStartTime = System.currentTimeMillis();
-        Thread.sleep(2000);
-        MobileElement panRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.backPageButtonXpath));
+       // Thread.sleep(2000);
+        MobileElement panRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(By.className("com.horcrux.svg.PathView")));
         panRadioButton.click();
         long clickingPanRadioButtonEndTime = System.currentTimeMillis();
         long clickingPanRadioButtonTotalTime = clickingPanRadioButtonEndTime - clickingPanRadioButtonStartTime;
-        System.out.println("back:  " + clickingPanRadioButtonTotalTime + " millisecond");
+        System.out.println("Clicking Back Page Button: " + clickingPanRadioButtonTotalTime + " millisecond");
 
 
         long clickingUltimateCheeseRadioButtonStartTime = System.currentTimeMillis();
-        Thread.sleep(2000);
-        MobileElement ultimateCheeseRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.backPageButtonXpath));
+        //Thread.sleep(2000);
+        MobileElement ultimateCheeseRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(By.className("com.horcrux.svg.PathView")));
         ultimateCheeseRadioButton.click();
         long checkingUltimateCheeseRadioButtonEndTime = System.currentTimeMillis();
         long checkingUltimateCheeseRadioButtonTotalTime = checkingUltimateCheeseRadioButtonEndTime - clickingUltimateCheeseRadioButtonStartTime;
-        System.out.println("back: " + checkingUltimateCheeseRadioButtonTotalTime + " millisecond");
+        System.out.println("Clicking Back Page Button: " + checkingUltimateCheeseRadioButtonTotalTime + " millisecond");
 
-        long clickingMacaroniSaladRadioButtonStartTime = System.currentTimeMillis();
-        MobileElement macaroniSaladRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.mixButtonXpath));
-        macaroniSaladRadioButton.click();
-        long clickingMacaroniSaladRadioButtonEndTime = System.currentTimeMillis();
-        long clickingMacaroniSaladRadioButtonTotalTime = clickingMacaroniSaladRadioButtonEndTime - clickingMacaroniSaladRadioButtonStartTime;
-        System.out.println("mix Button: " + clickingMacaroniSaladRadioButtonTotalTime + " millisecond");
+        long clickingPopularSearchesButtonStartTime = System.currentTimeMillis();
+        MobileElement popularSearchesButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.popularSearchesButtonXpath));
+        popularSearchesButton.click();
+        long clickingPopularSearchesButtonEndTime = System.currentTimeMillis();
+        long clickingPopularSearchesButtonTotalTime = clickingPopularSearchesButtonEndTime - clickingPopularSearchesButtonStartTime;
+        System.out.println("Clicking Popular Searches Button" + clickingPopularSearchesButtonTotalTime + " millisecond");
 
         Thread.sleep(1000);
         TouchAction scrollUp = new TouchAction<>(driver)
@@ -237,54 +236,55 @@ public class ads {
                 .release()
                 .perform();
 
-        long clickingMirindaRadioButtonStartTime = System.currentTimeMillis();
-        MobileElement mirindaRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.bkLuluHypermarketButtonXpath));
-        mirindaRadioButton.click();
-        long clickingMirindaRadioButtonEndTime = System.currentTimeMillis();
-        long clickingMirindaRadioButtonTotalTime = clickingMirindaRadioButtonEndTime - clickingMirindaRadioButtonStartTime;
-        System.out.println("lulu " + clickingMirindaRadioButtonTotalTime + " millisecond");
+        long clickingBkLuluHypermarketButtonStartTime = System.currentTimeMillis();
+        MobileElement bkLuluHypermarketButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.bkLuluHypermarketButtonXpath));
+        bkLuluHypermarketButton.click();
+        long clickingBkLuluHypermarketButtonEndTime = System.currentTimeMillis();
+        long clickingBkLuluHypermarketButtonTotalTime = clickingBkLuluHypermarketButtonEndTime - clickingBkLuluHypermarketButtonStartTime;
+        System.out.println("Clicking Bk Lulu Hypermarket Button " + clickingBkLuluHypermarketButtonTotalTime + " millisecond");
 
-        long clickingSevenUpRadioButtonStartTime = System.currentTimeMillis();
-        MobileElement sevenUpRadioButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.onlyOnSpeedyBunnyButtonXpath));
-        sevenUpRadioButton.click();
-        long clickingSevenUpRadioButtonEndTime = System.currentTimeMillis();
-        long clickingSevenUpRadioButtonTotalTime = clickingSevenUpRadioButtonEndTime - clickingSevenUpRadioButtonStartTime;
-        System.out.println("only: " + clickingSevenUpRadioButtonTotalTime + " millisecond");
+        long clickingOnlyOnSpeedyBunnyButtonStartTime = System.currentTimeMillis();
+        MobileElement onlyOnSpeedyBunnyButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.onlyOnSpeedyBunnyButtonXpath));
+        onlyOnSpeedyBunnyButton.click();
+        long clickingOnlyOnSpeedyBunnyButtonEndTime = System.currentTimeMillis();
+        long clickingOnlyOnSpeedyBunnyButtonTotalTime = clickingOnlyOnSpeedyBunnyButtonEndTime - clickingOnlyOnSpeedyBunnyButtonStartTime;
+        System.out.println("Clicking Only On Speedy Bunny Button: " + clickingOnlyOnSpeedyBunnyButtonTotalTime + " millisecond");
 
-        Thread.sleep(500);
-        long CheckingAddToCartButtonStartTime = System.currentTimeMillis();
-        MobileElement addToCartButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.familyAndFriendsOffersButtonXpath));
-        addToCartButton.click();
-        long CheckingAddToCartButtonEndTime = System.currentTimeMillis();
-        long CheckingAddToCartButtonTotalTime = CheckingAddToCartButtonEndTime - CheckingAddToCartButtonStartTime;
-        System.out.println("family: " + CheckingAddToCartButtonTotalTime + " millisecond");
+
+        long checkingFamilyAndFriendsOffersButtonStartTime = System.currentTimeMillis();
+       // Thread.sleep(500);
+        MobileElement familyAndFriendsOffersButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.familyAndFriendsOffersButtonXpath));
+        familyAndFriendsOffersButton.click();
+        long checkingFamilyAndFriendsOffersButtonEndTime = System.currentTimeMillis();
+        long checkingFamilyAndFriendsOffersButtonTotalTime = checkingFamilyAndFriendsOffersButtonEndTime - checkingFamilyAndFriendsOffersButtonStartTime;
+        System.out.println("Checking Family And Friends Offers Button : " + checkingFamilyAndFriendsOffersButtonTotalTime + " millisecond");
 
 
         long checkingGoToCartButtonStartTime = System.currentTimeMillis();
-        Thread.sleep(2000);
-        MobileElement goToCartButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.backPageButtonXpath));
+       // Thread.sleep(2000);
+        MobileElement goToCartButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(By.className("com.horcrux.svg.PathView")));
         goToCartButton.click();
         long checkingGoToCartButtonEndTime = System.currentTimeMillis();
         long checkingGoToCartButtonTotalTime = checkingGoToCartButtonEndTime - checkingGoToCartButtonStartTime;
-        System.out.println("back: " + checkingGoToCartButtonTotalTime + " millisecond");
-
-        long checkingRemoveProductFromCartButtonStartTime = System.currentTimeMillis();
-        MobileElement removeProductFromCartButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.clearButtonXpath));
-        removeProductFromCartButton.click();
-        long checkingRemoveProductFromCartButtonEndTime = System.currentTimeMillis();
-        long checkingRemoveProductFromCartButtonTotalTime = checkingRemoveProductFromCartButtonEndTime - checkingRemoveProductFromCartButtonStartTime;
-        System.out.println("logout: " + checkingRemoveProductFromCartButtonTotalTime + " millisecond");
+        System.out.println("Clicking Back Page Button: " + checkingGoToCartButtonTotalTime + " millisecond");
 
         long checkingTrashBinButtonStartTime = System.currentTimeMillis();
-        MobileElement trashBinButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.backPageButtonXpath));
+        MobileElement trashBinButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(By.className("com.horcrux.svg.PathView")));
         trashBinButton.click();
         long checkingTrashBinButtonEndTime = System.currentTimeMillis();
         long checkingTrashBinButtonTotalTime = checkingTrashBinButtonEndTime - checkingTrashBinButtonStartTime;
-        System.out.println("back: " + checkingTrashBinButtonTotalTime + " millisecond");
+        System.out.println("Clicking Back Page Button: " + checkingTrashBinButtonTotalTime + " millisecond");
+
+        long clickingClearRecentSearchesButtonStartTime = System.currentTimeMillis();
+        MobileElement clearRecentSearchesButton = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(_appXpath.clearRecentSearchesButtonXpath));
+        clearRecentSearchesButton.click();
+        long clickingClearRecentSearchesButtonEndTime = System.currentTimeMillis();
+        long clickingClearRecentSearchesButtonTotalTime = clickingClearRecentSearchesButtonEndTime - clickingClearRecentSearchesButtonStartTime;
+        System.out.println("Clicking Clear Recent Searches Button: " + clickingClearRecentSearchesButtonTotalTime + " millisecond");
 
         long popularRestaurantTestEndTime = System.currentTimeMillis();
         long popularRestaurantTestTotalTime = popularRestaurantTestEndTime - popularRestaurantTestStartTime;
-        System.out.println("filter Test: " + popularRestaurantTestTotalTime + " millisecond");
+        System.out.println("Product Filter Total Test: " + popularRestaurantTestTotalTime + " millisecond");
 
     }
 }

@@ -332,7 +332,7 @@ public class PopularRestaurantsTestWithLoginViaPhoneNumber {
 
         long popularRestaurantTestEndTime = System.currentTimeMillis();
         long popularRestaurantTestTotalTime = popularRestaurantTestEndTime - popularRestaurantTestStartTime;
-        System.out.println("Popular Restaurant Test: " + popularRestaurantTestTotalTime + " millisecond"); }
+        System.out.println("Popular Restaurant Total Test: " + popularRestaurantTestTotalTime + " millisecond"); }
 /*
         WebDriverWait wait = new WebDriverWait(driver, durationTime);
         long popularRestaurantTestStartTime = System.currentTimeMillis();

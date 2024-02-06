@@ -51,17 +51,17 @@ public final class AppXpath {
     public final By submitButtonXpath = xpath("//android.widget.TextView[@text=\"Submit\"]");
     //
 
-    public final By filterButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"What you cravin?\"]/android.widget.TextView");
-    public final By arabicButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Arabic\"]/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ImageView");
+    public final By procuctFilterButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"What you cravin?\"]/android.widget.TextView");
+    public final By categoriesButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Arabic\"]/android.view.ViewGroup/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ImageView");
     public final By backPageButtonXpath = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[15]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
 
-    public final By colaButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Cola\"]");
+    public final By cocaColaProductButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Cola\"]");
     public final By cocaColaButtonXpath = xpath("(//android.view.ViewGroup[@content-desc=\"coca cola, KWD 0.45 \"])[3]/android.widget.TextView[1]");
-    public final By mixButtonXpath = xpath("(//android.view.ViewGroup[@content-desc=\"Mix\"])[2]/android.widget.TextView");
+    public final By popularSearchesButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Mix\"]/android.widget.TextView");
     public final By bkLuluHypermarketButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"BK LuLu Hypermarket, 4.4, ETA 40 - 50 min, ·, min KWD 15.000\"]/android.widget.TextView[1]");
     public final By onlyOnSpeedyBunnyButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"ONLY on SpeedyBunny\"]/android.widget.TextView");
     public final By familyAndFriendsOffersButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Family and Friends Offers\"]/android.widget.TextView");
-    public final By clearButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Clear\"]/android.widget.TextView");
-    public final By closingTheSearchField2Xpath = xpath("//android.view.ViewGroup[@content-desc=\"Bbq\"]");
+    public final By clearRecentSearchesButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Clear\"]/android.widget.TextView");
+    public final By closingTheSearchFieldOnTheProductPageXpath = xpath("//android.view.ViewGroup[@content-desc=\"Bbq\"]");
 }
 

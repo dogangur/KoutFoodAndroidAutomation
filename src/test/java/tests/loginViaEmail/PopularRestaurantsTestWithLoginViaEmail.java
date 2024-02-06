@@ -308,5 +308,5 @@ public class PopularRestaurantsTestWithLoginViaEmail {
 
         long popularRestaurantTestEndTime = System.currentTimeMillis();
         long popularRestaurantTestTotalTime = popularRestaurantTestEndTime - popularRestaurantTestStartTime;
-        System.out.println("Popular Restaurant Test: " + popularRestaurantTestTotalTime + " millisecond"); }
+        System.out.println("Popular Restaurant Total Test: " + popularRestaurantTestTotalTime + " millisecond"); }
 }
