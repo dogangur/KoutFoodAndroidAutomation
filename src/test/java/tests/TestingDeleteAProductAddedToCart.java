@@ -1,6 +1,7 @@
 package tests;
 
 import constants.MobileAppXpath;
+import helper.Helper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -57,7 +58,7 @@ public class TestingDeleteAProductAddedToCart {
     }
 
     @Test(priority = 2)
-    void LoginViaEmailTest() {
+    void LoginTest() {
 
         long loginTestStartTime = System.currentTimeMillis();
 
@@ -76,7 +77,7 @@ public class TestingDeleteAProductAddedToCart {
 
         long loginTestEndTime = System.currentTimeMillis();
         long loginTestTotalTime = loginTestEndTime - loginTestStartTime;
-        System.out.println("Login Total Test: " + loginTestTotalTime + " millisecond");
+        System.out.println("Login Total Test: " + Helper.ConvertMillisecondToSecond(loginTestTotalTime) + " second");
     }
 
     @Test(priority = 3)
@@ -84,7 +85,7 @@ public class TestingDeleteAProductAddedToCart {
 
         WebDriverWait wait = new WebDriverWait(driver, durationTime);
 
-        long ProductOrderingTestStartTime = System.currentTimeMillis();
+        long productOrderingTestStartTime = System.currentTimeMillis();
 
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.seeAllButtonXpath, " The See All ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.restaurantButtonXpath, " Restaurant ", durationTime);
@@ -108,8 +109,8 @@ public class TestingDeleteAProductAddedToCart {
 //        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.removeProductFromCartButtonXpath, " Remove Product From Cart ", durationTime);
 //        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.startShoppingButtonXpath," Start Shopping Button ", durationTime);
 
-        long ProductOrderingTestEndTime = System.currentTimeMillis();
-        long ProductOrderingTestTotalTime = ProductOrderingTestEndTime - ProductOrderingTestStartTime;
-        System.out.println("Product Ordering Total Test: " + ProductOrderingTestTotalTime + " millisecond");
+        long productOrderingTestEndTime = System.currentTimeMillis();
+        long productOrderingTestTotalTime = productOrderingTestEndTime - productOrderingTestStartTime;
+        System.out.println("Product Ordering Total Test: " + Helper.ConvertMillisecondToSecond(productOrderingTestTotalTime) + " second");
     }
 }

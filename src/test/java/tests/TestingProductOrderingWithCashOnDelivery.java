@@ -1,6 +1,7 @@
 package tests;
 
 import constants.MobileAppXpath;
+import helper.Helper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -27,7 +28,7 @@ public class TestingProductOrderingWithCashOnDelivery {
 
         try {
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("appium:deviceName", "samsung SM-A23SF");
+            cap.setCapability("appium:deviceName", "samsung SM-A235F");
             cap.setCapability("appium:platformName", "Android");
             cap.setCapability("appium:uuid", "R68TC01QGZZ");
             cap.setCapability("appium:platformVersion", "14.0");
@@ -57,7 +58,7 @@ public class TestingProductOrderingWithCashOnDelivery {
     }
 
     @Test(priority = 2)
-    void LoginViaEmailTest() {
+    void LoginTest() {
 
         long loginTestStartTime = System.currentTimeMillis();
 
@@ -76,13 +77,13 @@ public class TestingProductOrderingWithCashOnDelivery {
 
         long loginTestEndTime = System.currentTimeMillis();
         long loginTestTotalTime = loginTestEndTime - loginTestStartTime;
-        System.out.println("Login Total Test: " + loginTestTotalTime + " millisecond");
+        System.out.println("Login Total Test: " + Helper.ConvertMillisecondToSecond(loginTestTotalTime) + " second");
     }
 
     @Test(priority = 3)
     void ProductOrderingTest() throws InterruptedException {
 
-        long ProductOrderingTestStartTime = System.currentTimeMillis();
+        long productOrderingTestStartTime = System.currentTimeMillis();
 
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.seeAllButtonXpath," The See All ",durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.restaurantButtonXpath," Restaurant ", durationTime);
@@ -99,8 +100,8 @@ public class TestingProductOrderingWithCashOnDelivery {
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.completePurchaseButtonXpath," Complete Purchase ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.backToHomeButtonXpath," Back To Home ", durationTime);
 
-        long ProductOrderingTestEndTime = System.currentTimeMillis();
-        long ProductOrderingTestTotalTime = ProductOrderingTestEndTime - ProductOrderingTestStartTime;
-        System.out.println("Product Ordering Total Test: " + ProductOrderingTestTotalTime + " millisecond");
+        long productOrderingTestEndTime = System.currentTimeMillis();
+        long productOrderingTestTotalTime = productOrderingTestEndTime - productOrderingTestStartTime;
+        System.out.println("Product Ordering Total Test: " + Helper.ConvertMillisecondToSecond(productOrderingTestTotalTime) + " second");
     }
 }

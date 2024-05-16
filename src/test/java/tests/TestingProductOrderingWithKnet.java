@@ -1,6 +1,7 @@
 package tests;
 
 import constants.MobileAppXpath;
+import helper.Helper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -57,7 +58,7 @@ public class TestingProductOrderingWithKnet {
     }
 
     @Test(priority = 2)
-    void LoginViaEmailTest() {
+    void LoginTest() {
 
         long loginTestStartTime = System.currentTimeMillis();
 
@@ -76,13 +77,13 @@ public class TestingProductOrderingWithKnet {
 
         long loginTestEndTime = System.currentTimeMillis();
         long loginTestTotalTime = loginTestEndTime - loginTestStartTime;
-        System.out.println("Login Total Test: " + loginTestTotalTime + " millisecond");
+        System.out.println("Login Total Test: " + Helper.ConvertMillisecondToSecond(loginTestTotalTime) + " second");
     }
 
     @Test(priority = 3)
     void ProductOrderingTest() throws InterruptedException {
 
-        long ProductOrderingTestStartTime = System.currentTimeMillis();
+        long productOrderingTestStartTime = System.currentTimeMillis();
 
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.seeAllButtonXpath," The See All ",durationTime);
         _mobileAppServices.ScrollUp(driver,740,1769,752,1339);
@@ -95,12 +96,12 @@ public class TestingProductOrderingWithKnet {
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.secondByProductRadioButtonXpath," Second By Product Radio ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.addToCartButtonXpath," Add To Card ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.goToCartButtonXpath," Go To Cart ", durationTime);
-        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.goToCheckoutButtonXpath," Go TO Checkout ", durationTime);
+        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.goToCheckoutButtonXpath," Go To Checkout ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.kNetButtonXpath," K-Net ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.completePurchaseButtonXpath," Complete Purchase ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.bankXpath," Bank ",durationTime);
         _mobileAppServices.ScrollUp(driver,567,1927,595,1062);
-        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.kNetTestCartXpath," K-net test cart ",durationTime);
+        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.kNetTestCartXpath," K-net test cart Radio",durationTime);
         _mobileAppServices.FindTextFieldAndEnterNumber(driver,_Mobile_appXpath.cardNumberXpath," Cart Number","0000000001", durationTime); //1111111110
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.clickToCloseTheKeyboardXpath," Close The Keyboard", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.monthButtonXpath," Month ",durationTime);
@@ -112,8 +113,8 @@ public class TestingProductOrderingWithKnet {
         _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.confirmButtonXpath," Confirm ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.backToHomeButtonXpath," Back To Home ", durationTime);
 
-        long ProductOrderingTestEndTime = System.currentTimeMillis();
-        long ProductOrderingTestTotalTime = ProductOrderingTestEndTime - ProductOrderingTestStartTime;
-        System.out.println("Product Ordering Total Test: " + ProductOrderingTestTotalTime + " millisecond");
+        long productOrderingTestEndTime = System.currentTimeMillis();
+        long productOrderingTestTotalTime = productOrderingTestEndTime - productOrderingTestStartTime;
+        System.out.println("Product Ordering Total Test: " + Helper.ConvertMillisecondToSecond(productOrderingTestTotalTime) + " second");
     }
 }

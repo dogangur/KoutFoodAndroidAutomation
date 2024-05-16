@@ -22,7 +22,7 @@ public final class MobileAppXpath {
 
 //Cart
     public final By addToCartButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Add to Cart, KD 6.000\"]/android.widget.TextView");
-    public final By goToCartButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Go to Cart, KD 4.700\"]/android.widget.TextView");
+    public final By goToCartButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Go to Cart, KD 5.900\"]/android.widget.TextView");
     public final By goToCheckoutButtonXpath=xpath("(//android.widget.SeekBar[@content-desc=\"Bottom Sheet\"])[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView");
     public final By completePurchaseButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Complete Purchase\"]");
     public final By cashOnDeliveryButtonXpath= xpath("//android.view.ViewGroup[@content-desc=\"\uDB80\uDD14, Cash On Delivery\"]");

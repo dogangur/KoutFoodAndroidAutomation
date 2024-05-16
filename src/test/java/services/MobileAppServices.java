@@ -1,28 +1,25 @@
 package services;
 
 import constants.MobileAppXpath;
+import helper.Helper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 
 public class MobileAppServices {
     private MobileAppXpath _Mobile_appXpath;
+    private static final int SECOND_DIVIDER = 1000;
 
     public MobileAppServices() {
         _Mobile_appXpath = new MobileAppXpath();
@@ -46,7 +43,7 @@ public class MobileAppServices {
         givePermission.click();
         long endTime = System.currentTimeMillis();
         long totalTime = endTime - startTime;
-        System.out.println("Givepermission Test: " + totalTime + " millisecond");
+        System.out.println("GivePermission Test: " + Helper.ConvertMillisecondToSecond(totalTime) + " second");
     }
     public void ScrollUp(AppiumDriver<MobileElement> driver, int pressXOffset,int pressYOffset, int moveToXOffset, int moveToYOffset) throws InterruptedException {
 
@@ -62,28 +59,28 @@ public class MobileAppServices {
     public void FindButtonElementAndClick(AppiumDriver<MobileElement> driver, By elementId, String processExpression, int durationTime) {
 
         WebDriverWait wait = getWebDriverWait(driver, durationTime);
-        long clickingButtonStartTime = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         MobileElement button = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(elementId));
         button.click();
-        long clickingButtonEndTime = System.currentTimeMillis();
-        long clickingButtonTotalTime = clickingButtonEndTime - clickingButtonStartTime;
-        System.out.println("Clicking the" + processExpression + "Button:" + clickingButtonTotalTime + " millisecond");
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println("Clicking the" + processExpression + "Button:" + Helper.ConvertMillisecondToSecond(totalTime) + " second");
     }
 
     public void FindTextFieldElementAndWrite(AppiumDriver<MobileElement> driver, By elementId, String text, String processExpression, int durationTime) {
         WebDriverWait wait = getWebDriverWait(driver, durationTime);
-        long enteringTextFieldStartTime = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         MobileElement textField = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(elementId));
         textField.sendKeys(text);
-        long enteringTextFieldEndTime = System.currentTimeMillis();
-        long enteringTextFieldTotalTime = enteringTextFieldEndTime - enteringTextFieldStartTime;
-        System.out.println("Entering text in "+ processExpression + "text field: " + enteringTextFieldTotalTime + " millisecond");
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println("Entering text in "+ processExpression + "text field: " + Helper.ConvertMillisecondToSecond(totalTime) + " second");
     }
 
     public void FindTextFieldAndEnterNumber(AppiumDriver<MobileElement> driver, By elementId, String processExpression, String number, int durationTime ){
 
         WebDriverWait wait = getWebDriverWait(driver, durationTime);
-        long clickingPhoneNumberTextFieldStartTime = System.currentTimeMillis();
+        long startTime = System.currentTimeMillis();
         MobileElement phoneNumberTextField = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(elementId));
         phoneNumberTextField.click();
        // Telefon numarası tuşlamalarını simüle etmek için KeyEvent kullanma
@@ -92,9 +89,9 @@ public class MobileAppServices {
             String digitStr = Character.toString(digit);
             driver.getKeyboard().sendKeys(digitStr); // Her rakamı ayrı ayrı gönder
         }
-        long clickingPhoneNumberTextFieldEndTime = System.currentTimeMillis();
-        long clickingPhoneNumberTextFieldTotalTime = clickingPhoneNumberTextFieldEndTime - clickingPhoneNumberTextFieldStartTime;
-        System.out.println("Clicking"+ processExpression +"Text Field:" + clickingPhoneNumberTextFieldTotalTime + " millisecond");
+        long endTime = System.currentTimeMillis();
+        long totalTime = endTime - startTime;
+        System.out.println("Clicking"+ processExpression +"Text Field:" + Helper.ConvertMillisecondToSecond(totalTime) + " second");
 }
 
 
