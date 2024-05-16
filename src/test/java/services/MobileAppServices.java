@@ -60,6 +60,7 @@ public class MobileAppServices {
             .perform();
 }
     public void FindButtonElementAndClick(AppiumDriver<MobileElement> driver, By elementId, String processExpression, int durationTime) {
+
         WebDriverWait wait = getWebDriverWait(driver, durationTime);
         long clickingButtonStartTime = System.currentTimeMillis();
         MobileElement button = (MobileElement) wait.until(ExpectedConditions.elementToBeClickable(elementId));
