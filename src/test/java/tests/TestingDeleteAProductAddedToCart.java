@@ -28,7 +28,7 @@ public class TestingDeleteAProductAddedToCart {
 
         try {
             DesiredCapabilities cap = new DesiredCapabilities();
-            cap.setCapability("appium:deviceName", "samsung SM-A23SF");
+            cap.setCapability("appium:deviceName", "samsung SM-A235F");
             cap.setCapability("appium:platformName", "Android");
             cap.setCapability("appium:uuid", "R68TC01QGZZ");
             cap.setCapability("appium:platformVersion", "14.0");
