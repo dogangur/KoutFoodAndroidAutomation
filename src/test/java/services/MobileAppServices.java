@@ -33,6 +33,7 @@ public class MobileAppServices {
     }
 
     public void GivePermissionTest(AppiumDriver<MobileElement> driver, int durationTime) {
+
         Wait wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(durationTime))
                 .pollingEvery(Duration.ofSeconds(1))
