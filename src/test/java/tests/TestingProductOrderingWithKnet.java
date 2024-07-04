@@ -45,7 +45,7 @@ public class TestingProductOrderingWithKnet {
             driver.launchApp();
             long endTime = System.currentTimeMillis();
             long totalTime = endTime - startTime;
-            System.out.println("Setup : " + totalTime + " millisecond");
+            System.out.println("Setup : " + Helper.ConvertMillisecondToSecond(totalTime) + " millisecond");
 
         } catch (MalformedURLException mx) {
             System.out.println("Malformed URL Exception");
@@ -53,7 +53,7 @@ public class TestingProductOrderingWithKnet {
     }
 
     @Test(priority = 1)
-    void GivepermissionTest() {
+    void GivePermissionTest() {
         _mobileAppServices.GivePermissionTest(driver,durationTime);
     }
 
@@ -89,11 +89,22 @@ public class TestingProductOrderingWithKnet {
         _mobileAppServices.ScrollUp(driver,740,1769,752,1339);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.restaurantButtonXpath," Restaurant ", durationTime);
         _mobileAppServices.ScrollUp(driver, 700,2169,691,1249);
-        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.theProductButtonXpath," The Product ", durationTime);
-        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.familyMealButtonXpath," Family Meal Radio ", durationTime);
-        _mobileAppServices.ScrollUp(driver, 567, 1899, 613, 1062);
-        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.byProductRadioButtonXpath," By Product Radio ", durationTime);
-        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.secondByProductRadioButtonXpath," Second By Product Radio ", durationTime);
+
+          _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.theProductButtonXpath," The Product ", durationTime);
+          _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.familyMealButtonXpath," Family Meal Radio ", durationTime);
+          _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.byProductRadioButtonXpath," By Product Radio ", durationTime);
+          _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.secondByProductRadioButtonXpath," Second By Product Radio ", durationTime);
+          _mobileAppServices.ScrollUp(driver, 567, 1899, 613, 1062);
+
+//        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.theProductTwoButtonXpath, "theProductTwoButtonXpath", durationTime);
+//        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.mandatoryBy_productRadioButtonXpath,"mandatoryBy_productRadioButtonXpath",durationTime);
+//        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.mandatorySecondBy_productRadioButtonXpath, "mandatoryBy_productRadioButtonXpath", durationTime);
+//        _mobileAppServices.ScrollUp(driver,927,1927,941,884);
+//        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.mandatoryThirdBy_productRadioButtonXpath,"mandatoryThirdBy_productRadioButtonXpath", durationTime);
+//        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.mandatoryFourthBy_productRadioButtonXpath, "mandatoryFourthBy_productRadioButtonXpath",durationTime);
+//        _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.addToCartButtonForK_netPaymentMethodButtonXpath, "addToCartButtonForK_netPaymentMethodButtonXpath",durationTime);
+//        _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.goToCartButtonForK_netPaymentMethodButtonXpath, "goToCartButtonForK_netPaymentMethodButtonXpath", durationTime);
+
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.addToCartButtonXpath," Add To Card ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.goToCartButtonXpath," Go To Cart ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.goToCheckoutButtonXpath," Go To Checkout ", durationTime);
@@ -108,7 +119,8 @@ public class TestingProductOrderingWithKnet {
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.month09ThRadioButtonXpath," 9th Month ",durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.yearButtonXpath," Year ",durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.year2025RadioButtonXpath, " Year 2025 " ,durationTime);
-        _mobileAppServices.FindTextFieldElementAndWrite(driver,_Mobile_appXpath.cartPinXpath," Pin " , "1234", durationTime);
+        _mobileAppServices.FindTextFieldAndEnterNumber(driver,_Mobile_appXpath.cartPinXpath," Pin " , "1234", durationTime);
+        //_mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.clickToCloseTheKeyboardXpath,"a", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.submitButtonXpath," Submit ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver,_Mobile_appXpath.confirmButtonXpath," Confirm ", durationTime);
         _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.backToHomeButtonXpath," Back To Home ", durationTime);

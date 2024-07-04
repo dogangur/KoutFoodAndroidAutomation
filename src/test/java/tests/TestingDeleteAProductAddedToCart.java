@@ -45,7 +45,7 @@ public class TestingDeleteAProductAddedToCart {
             driver.launchApp();
             long endTime = System.currentTimeMillis();
             long totalTime = endTime - startTime;
-            System.out.println("Setup : " + totalTime + " millisecond");
+            System.out.println("Setup : " + Helper.ConvertMillisecondToSecond(totalTime) + " millisecond");
 
         } catch (MalformedURLException mx) {
             System.out.println("Malformed URL Exception");
@@ -53,7 +53,7 @@ public class TestingDeleteAProductAddedToCart {
     }
 
     @Test(priority = 1)
-    void GivepermissionTest() {
+    void GivePermissionTest() {
         _mobileAppServices.GivePermissionTest(driver,durationTime);
     }
 

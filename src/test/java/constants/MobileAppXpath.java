@@ -22,12 +22,14 @@ public final class MobileAppXpath {
 
 //Cart
     public final By addToCartButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Add to Cart, KD 6.000\"]/android.widget.TextView");
+    public final By addToCartButtonForK_netPaymentMethodButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Add to Cart, KD 2.900\"]/android.widget.TextView");
     public final By goToCartButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Go to Cart, KD 5.900\"]/android.widget.TextView");
+    public final By goToCartButtonForK_netPaymentMethodButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Go to Cart, KD 3.400\"]/android.widget.TextView");
     public final By goToCheckoutButtonXpath=xpath("(//android.widget.SeekBar[@content-desc=\"Bottom Sheet\"])[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView");
     public final By completePurchaseButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Complete Purchase\"]");
     public final By cashOnDeliveryButtonXpath= xpath("//android.view.ViewGroup[@content-desc=\"\uDB80\uDD14, Cash On Delivery\"]");
-   public final By kNetButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"K-Net/Debit Card\"]/android.widget.TextView");
-     public final By deleteIconXpath = xpath("(//android.widget.SeekBar[@content-desc=\"Bottom Sheet\"])[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView");
+    public final By kNetButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"K-Net/Debit Card\"]/android.widget.TextView");
+    public final By deleteIconXpath = xpath("(//android.widget.SeekBar[@content-desc=\"Bottom Sheet\"])[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView");
     public final By deleteButtonXpath=xpath("(//android.widget.SeekBar[@content-desc=\"Bottom Sheet\"])[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.TextView");
     public final By removeProductFromCartButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Remove\"]");
 
@@ -40,8 +42,14 @@ public final class MobileAppXpath {
     public final By familyMealButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Royale Mix Family Meal\"]/com.horcrux.svg.SvgView");
     public final By byProductRadioButtonXpath= xpath("//android.view.ViewGroup[@content-desc=\"Apple Pie\"]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView[2]");
     public final By secondByProductRadioButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Hersheys Pie\"]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.RectView[2]");
+    public final By theProductTwoButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"NEW KING CROISSANWICH, Egg, Sausage, Cheese and bacon Croissanwich, Hash Brown, a Drink and Your choice of a Side item., KD 2.250\"]/android.view.ViewGroup/android.widget.TextView[1]");
+    public final By mandatoryBy_productRadioButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Go Regular\"]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
+    public final By mandatorySecondBy_productRadioButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Chicken Fries\"]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
+    public final By mandatoryThirdBy_productRadioButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"BBQ Loaded Fries-Hack\"]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
+    public final By mandatoryFourthBy_productRadioButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"Chocolate Milkshake\"]/com.horcrux.svg.SvgView/com.horcrux.svg.GroupView/com.horcrux.svg.PathView");
 
-//Phone Number
+
+    //Phone Number
     public final By countryPhoneCodeButtonXpath = xpath("//android.widget.TextView[@text=\"\uE313\"]");
     public final By egyptCodePhoneButtonXpath = xpath("//android.view.ViewGroup[@content-desc=\"\uD83C\uDDEA\uD83C\uDDEC, +20, Egypt\"]");
     public final By phoneNumberTextFieldXpath = xpath("//android.widget.EditText[@text=\"Phone Number\"]");
@@ -55,7 +63,9 @@ public final class MobileAppXpath {
     public final By yearButtonXpath = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[7]/android.view.View[4]/android.view.View[3]");
     public final By year2025RadioButtonXpath =xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.CheckedTextView[3]");
     public final By cartPinXpath = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[7]/android.view.View[5]/android.view.View[2]/android.widget.EditText");
-   public final By clickToCloseTheKeyboardXpath = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView");
+    public final By clickToCloseTheKeyboardXpath = xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[8]/android.view.View/android.widget.TextView[1]");
+
+
     public final By submitButtonXpath =xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[10]/android.widget.Button[1]");
     public final By confirmButtonXpath =xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[11]/android.widget.Button[1]");
 }
