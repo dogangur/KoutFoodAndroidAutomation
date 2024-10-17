@@ -5,7 +5,6 @@ import helper.Helper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,7 +33,7 @@ public class TestingDeleteAProductAddedToCart {
             cap.setCapability("deviceName", "sdk_gphone64_x86_64");
             cap.setCapability("platformName", "Android");
             cap.setCapability("udid", "emulator-5554");
-            cap.setCapability("platformVersion", "13.0");
+            cap.setCapability("platformVersion", "15.0");
             cap.setCapability("appPackage", "com.koutfood.koutfood");
             cap.setCapability("appActivity", "com.koutfood.koutfood.MainActivity");
             cap.setCapability("skipUnlock", "true");
@@ -80,7 +79,7 @@ public class TestingDeleteAProductAddedToCart {
 
         try {
             long startTime = System.currentTimeMillis();
-            _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.locationButton, "Allow Permission", durationTime);
+            _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.OnlyThisTimelocationButton, "Allow Permission", durationTime);
             long endTime = System.currentTimeMillis();
             System.out.println("Allow Permission Duration: " + Helper.ConvertMillisecondToSecond(endTime - startTime) + " seconds");
 

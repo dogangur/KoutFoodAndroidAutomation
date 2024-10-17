@@ -5,7 +5,6 @@ import helper.Helper;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -59,7 +58,7 @@ public class TestingProductOrderingWithCashOnDelivery {
             cap.setCapability("deviceName", "sdk_gphone64_x86_64");
             cap.setCapability("platformName", "Android");
             cap.setCapability("udid", "emulator-5554");
-            cap.setCapability("platformVersion", "13.0");
+            cap.setCapability("platformVersion", "15.0");
             cap.setCapability("appPackage", "com.koutfood.koutfood");
             cap.setCapability("appActivity", "com.koutfood.koutfood.MainActivity");
             cap.setCapability("skipUnlock", "true");
@@ -90,11 +89,11 @@ public class TestingProductOrderingWithCashOnDelivery {
             long startTime = System.currentTimeMillis();
             TimeUnit.SECONDS.sleep(5);
 
-            WebElement permissionButton = wait.until(ExpectedConditions.visibilityOfElementLocated(_Mobile_appXpath.preciseButtonXpath));
+            WebElement permissionButton = wait.until(ExpectedConditions.visibilityOfElementLocated(_Mobile_appXpath.OnlyThisTimelocationButton));
 
             if (permissionButton != null && permissionButton.isDisplayed()) {
                 wait.until(ExpectedConditions.elementToBeClickable(permissionButton));
-                _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.preciseButtonXpath, "Precise Location Permission", durationTime);
+                _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.OnlyThisTimelocationButton, "Precise Location Permission", durationTime);
             } else {
                 throw new Exception("Permission button is not visible or clickable.");
             }
@@ -118,7 +117,7 @@ public class TestingProductOrderingWithCashOnDelivery {
         try {
             long startTime = System.currentTimeMillis();
             TimeUnit.SECONDS.sleep(5);
-            _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.locationButton, "Allow Permission", durationTime);
+            _mobileAppServices.FindButtonElementAndClick(driver, _Mobile_appXpath.OnlyThisTimelocationButton, "Allow Permission", durationTime);
             TimeUnit.SECONDS.sleep(5);
             long endTime = System.currentTimeMillis();
             long duration = endTime - startTime;
