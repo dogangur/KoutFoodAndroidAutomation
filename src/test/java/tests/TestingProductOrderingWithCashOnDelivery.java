@@ -59,7 +59,7 @@ public class TestingProductOrderingWithCashOnDelivery {
             cap.setCapability("deviceName", "sdk_gphone64_x86_64");
             cap.setCapability("platformName", "Android");
             cap.setCapability("udid", "emulator-5554");
-            cap.setCapability("platformVersion", "13.0");
+            cap.setCapability("platformVersion", "15.0");
             cap.setCapability("appPackage", "com.koutfood.koutfood");
             cap.setCapability("appActivity", "com.koutfood.koutfood.MainActivity");
             cap.setCapability("skipUnlock", "true");
